@@ -1,0 +1,51 @@
+<h1>Lista de Usuarios</h1>
+<div class="row">
+    <div ng-repeat="usuario in usuarios">
+        <div class="col-sm-4" ng-init="usuario.visible=false">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2>{{usuario.apellido}} {{usuario.nombre}} </h2>
+                    <p>Edad: {{usuario.edad}}</p>
+                    <p>Correo: {{usuario.correo}}</p>
+                    <button ng-click="usuario.visible=!usuario.visible" class="btn btn-default">Editar</button>
+                    <a href="#/pastel/{{usuario.id}}" class="btn btn-success">Agregar Pastel</a>
+                    <br>
+                    <br>
+                    <div>
+                        <form class="animated bounceIn" ng-show="usuario.visible" ng-submit="editarUsuario(usuario, $index)">
+                            <div class="form-group">
+                                <label for="idnombre">Nombre</label>
+                                <input ng-model="usuario.nombre" type="text" class="form-control" id="idnombre" placeholder="Actualiza tu Nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="idapellido">Apellido</label>
+                                <input ng-model="usuario.apellido" type="text" class="form-control" id="idapellido" placeholder="Actualiza tu Apellido">
+                            </div>
+                            <div class="form-group">
+                                <label for="idEdad">Edad</label>
+                                <input ng-model="usuario.edad" type="text" class="form-control" id="idEdad" placeholder="Actualiza tu Edad">
+                            </div>
+                            <div class="form-group">
+                                <label for="idCorreo">Correo</label>
+                                <input ng-model="usuario.correo" type="text" class="form-control" id="idCorreo" placeholder="Actualiza tu Correo">
+                            </div>
+                            <div class="form-group">
+                                <label for="idCiudad">Ciudad</label>
+                                <input ng-model="usuario.ciudad" type="text" class="form-control" id="idCiudad" placeholder="Actualiza tu Ciudad">
+                            </div>
+                            <div class="form-group">
+                                <label for="idFoto">Foto</label>
+                                <input ng-model="usuario.foto" type="text" class="form-control" id="idFoto" placeholder="Actualiza tu Foto">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h2>{{usuario.ciudad}}</h2>
+                    <img src="{{usuario.foto}}" width="100" height="100">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

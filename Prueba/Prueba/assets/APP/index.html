@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="LIBRERIAS/CSS/bootstrap.css">
+    <link rel="stylesheet" href="LIBRERIAS/CSS/animate.css">
+    <!--    <link rel="stylesheet" type="text/css" href="LIBRERIAS/CSS/angular-toastr.css">-->
+
+</head>
+
+<body ng-app="Prueba">
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>Juan Castillo</li>
+                    <li><a href="#/home">Home</a></li>
+                    <li><a href="#/usuario">Nuevo Usuario</a></li>
+                </ul>
+
+            </div>
+
+    </nav>
+
+    <div class="container">
+        <div class="animated bounceIn" ui-view>
+
+        </div>
+    </div>
+
+
+
+    <script src="LIBRERIAS/JS/angular.js"></script>
+
+    <script src="https://npmcdn.com/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <link rel="stylesheet" href="https://npmcdn.com/angular-toastr/dist/angular-toastr.css" />
+
+    <script src="LIBRERIAS/JS/angular-ui-router.js"></script>
+    <script src="LIBRERIAS/JS/angular-resource.js"></script>
+    <script src="LIBRERIAS/JS/angular-animate.js"></script>
+    <!--    <script type="text/javascript" src="LIBRERIAS/JS/angular-toastr.js"></script>-->
+
+    <script src="LIBRERIAS/JS/jquery-2.2.0.js"></script>
+    <script src="LIBRERIAS/JS/bootstrap.js"></script>
+
+    <script src="app.js"></script>
+
+    <script src="FACTORY/Factory.js"></script>
+
+    <script src="CONTROLADORES/PastelController.js"></script>
+    <script src="CONTROLADORES/UsuarioController.js"></script>
+    <script src="CONTROLADORES/HomeController.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<h1>Esta es la vista de Usuario</h1>
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2> {{nuevoUsuario.nombre}} {{nuevoUsuario.apellido}} </h2>
+                <p>Edad: {{nuevoUsuario.edad}}</p>
+                <p>Correo: {{nuevoUsuario.correo}}</p>
+            </div>
+            <div class="col-sm-4">
+                <h2>{{nuevoUsuario.ciudad}}</h2>
+                <img src="{{nuevoUsuario.foto}}" width="100" height="100">
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <h2>Agregar nuevo Usuario</h2>
+        <form ng-submit="agregarNuevoUsuario()">
+
+            <div class="form-group">
+                <label for="idNombre">Nombre</label>
+                <input ng-model="nuevoUsuario.nombre" type="text" class="form-control" id="idNombre" placeholder="Ingresa tu Nombre">
+            </div>
+            <div class="form-group">
+                <label for="idApellido">Apellido</label>
+                <input ng-model="nuevoUsuario.apellido" type="text" class="form-control" id="idApellido" placeholder="Ingresa tu Apellido">
+            </div>
+            <div class="form-group">
+                <label for="idEdad">Edad</label>
+                <input ng-model="nuevoUsuario.edad" type="text" class="form-control" id="idEdad" placeholder="Ingresa tu Edad">
+            </div>
+            <div class="form-group">
+                <label for="idCorreo">Correo</label>
+                <input ng-model="nuevoUsuario.correo" type="text" class="form-control" id="idCorreo" placeholder="Ingresa tu Correo electronico">
+            </div>
+            <div class="form-group">
+                <label for="idCiudad">Ciudad</label>
+                <input ng-model="nuevoUsuario.ciudad" type="text" class="form-control" id="idCiudad" placeholder="Ingresa tu Ciudad de Nacimiento">
+            </div>
+            <div class="form-group">
+                <label for="idFoto">Fecha Nacimiento</label>
+                <input ng-model="nuevoUsuario.foto" type="text" class="form-control" id="idFoto" placeholder="Foto (URL de imagen)">
+            </div>
+            <button class="btn btn-success">Agregar Usuario</button>
+        </form>
+    </div>
+    <div class="col-sm-4"></div>
+</div>
